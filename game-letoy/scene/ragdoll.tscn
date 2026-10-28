@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ehepw8h5cbwq"]
 
 [ext_resource type="Texture2D" uid="uid://c4sdme6bmb5io" path="res://icon.svg" id="1_lvb0x"]
+[ext_resource type="Texture2D" uid="uid://djo2j3lhok6s3" path="res://kaki kanan.png" id="2_vlbs1"]
 
 [node name="ragdoll" type="CharacterBody2D" unique_id=1897693082]
 
@@ -42,8 +43,11 @@ position = Vector2(-41.000008, 211)
 rotation = -0.8684067
 
 [node name="Sprite2D" type="Sprite2D" parent="leg" unique_id=1930463483]
-scale = Vector2(0.5999994, 0.23999941)
-texture = ExtResource("1_lvb0x")
+texture_filter = 1
+position = Vector2(2.9464722, 2.3431406)
+rotation = 1.5519297
+scale = Vector2(2.2595031, 2.4802418)
+texture = ExtResource("2_vlbs1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="leg" unique_id=165506094]
 position = Vector2(3, 21.000004)
@@ -54,9 +58,12 @@ polygon = PackedVector2Array(-58.6929, -151.47697, -68.6929, -140.47697, -68.692
 position = Vector2(45, 209.99998)
 rotation = -2.233175
 
-[node name="Sprite2D" type="Sprite2D" parent="leg2" unique_id=1667859948]
-scale = Vector2(0.5999994, 0.23999941)
-texture = ExtResource("1_lvb0x")
+[node name="Sprite2D" type="Sprite2D" parent="leg2" unique_id=154431205]
+texture_filter = 1
+position = Vector2(2.9464722, 2.3431396)
+rotation = 1.5519297
+scale = Vector2(2.2595031, 2.4802415)
+texture = ExtResource("2_vlbs1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="leg2" unique_id=920358870]
 position = Vector2(3, 21.000004)
