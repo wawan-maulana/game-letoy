@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://chill32jhv7w2"]
+
+[ext_resource type="Texture2D" uid="uid://c4sdme6bmb5io" path="res://icon.svg" id="1_de0u6"]
+[ext_resource type="PackedScene" uid="uid://b2etuq84t50v8" path="res://scene/ball.tscn" id="2_smhde"]
+[ext_resource type="PackedScene" uid="uid://40tiv46h53vs" path="res://scene/ragdoll_gawang.tscn" id="3_smhde"]
+
+[node name="BallToGawang" type="Node2D" unique_id=976193212]
+
+[node name="ground" type="StaticBody2D" parent="." unique_id=980516424]
+
+[node name="Sprite2D" type="Sprite2D" parent="ground" unique_id=418850136]
+position = Vector2(562, 556)
+scale = Vector2(11.272727, 1.6956521)
+texture = ExtResource("1_de0u6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground" unique_id=1658472101]
+polygon = PackedVector2Array(-156, 473, -3, 446, 1152, 444, 1287, 466, 1285, 647, 1153, 668, -4, 663, -159, 645)
+
+[node name="Ball" parent="." unique_id=1082364027 instance=ExtResource("2_smhde")]
+position = Vector2(217, 314)
+
+[node name="ragdoll_gawang" parent="Ball" unique_id=1897693082 instance=ExtResource("3_smhde")]
+position = Vector2(-91, -106)

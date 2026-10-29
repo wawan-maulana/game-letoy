@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b2etuq84t50v8"]
+
+[ext_resource type="Texture2D" uid="uid://c4sdme6bmb5io" path="res://icon.svg" id="1_d8dhm"]
+[ext_resource type="Script" uid="uid://derj7jfud057" path="res://script/bolaDitendang.gd" id="1_h6iok"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h6iok"]
+radius = 61.400326
+
+[node name="Ball" type="Node2D" unique_id=1082364027]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1967140843]
+position = Vector2(72, 68)
+gravity_scale = 5.5
+freeze = true
+script = ExtResource("1_h6iok")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=199442132]
+position = Vector2(2, 0)
+scale = Vector2(1.156, 1)
+texture = ExtResource("1_d8dhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1081388000]
+position = Vector2(2, -2)
+shape = SubResource("CircleShape2D_h6iok")
+
+[node name="Line2D" type="Line2D" parent="RigidBody2D" unique_id=775446660]
+default_color = Color(0, 0.19215687, 1, 1)
