@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c5esn3gsf51u0"]
+
+[ext_resource type="Texture2D" uid="uid://mrh3otg5yu3a" path="res://assets/barang/vas.png" id="1_1m3pi"]
+[ext_resource type="Script" uid="uid://cu0yvtdwqyqmy" path="res://script/obstekel.gd" id="2_t8rw3"]
+
+[node name="Vas" type="Sprite2D" unique_id=98211067]
+texture_filter = 1
+texture = ExtResource("1_1m3pi")
+script = ExtResource("2_t8rw3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=803500102]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1072799664]
+polygon = PackedVector2Array(-25, -16, -19, -9, -20, 4, -22, 11, -23, 23, -17, 30, -15, 33, 7, 33, 12, 25, 14, 15, 7, 3, 8, -7, 12, -16, 20, -13, 33, -22, 26, -39, 17, -41, 9, -37, 2, -42, -5, -44, -13, -42, -26, -41, -29, -31, -24, -23)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

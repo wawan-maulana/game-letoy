@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://d15gf6516lhxj" path="res://script/world.gd" id="1_1y6eq"]
 [ext_resource type="PackedScene" uid="uid://ehepw8h5cbwq" path="res://scene/ragdoll.tscn" id="2_1y6eq"]
 [ext_resource type="Script" uid="uid://bja7tlndlhqkp" path="res://script/ragdoll.gd" id="4_kjdlf"]
+[ext_resource type="Texture2D" uid="uid://b04pqaegggbs8" path="res://assets/barang/jersey.png" id="4_n1ewr"]
+[ext_resource type="PackedScene" uid="uid://c5esn3gsf51u0" path="res://scene/obstekel.tscn" id="5_4tmsr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1y6eq"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
@@ -23,3 +25,14 @@ polygon = PackedVector2Array(-156, 473, -3, 446, 1152, 444, 1287, 466, 1285, 647
 [node name="ragdoll" parent="." unique_id=1897693082 instance=ExtResource("2_1y6eq")]
 position = Vector2(362, 76)
 script = ExtResource("4_kjdlf")
+
+[node name="object" type="Node2D" parent="." unique_id=886849835]
+
+[node name="Jersey" type="Sprite2D" parent="object" unique_id=676160792]
+texture_filter = 1
+position = Vector2(1099, 398)
+texture = ExtResource("4_n1ewr")
+
+[node name="Vas" parent="object" unique_id=98211067 node_paths=PackedStringArray("player") instance=ExtResource("5_4tmsr")]
+position = Vector2(640, 401)
+player = NodePath("../../ragdoll")
